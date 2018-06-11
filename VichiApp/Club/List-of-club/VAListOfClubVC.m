@@ -221,12 +221,15 @@
       
         cell.btnguest.layer.borderColor=[UIColor grayColor].CGColor;
         cell.btnguest.layer.borderWidth=1;
+        cell.btnguest.tintColor = [UIColor grayColor];
         
         cell.btntable.layer.borderColor=[UIColor grayColor].CGColor;
         cell.btntable.layer.borderWidth=1;
+        cell.btntable.tintColor = [UIColor grayColor];
         
         cell.btmpass.layer.borderColor=[UIColor grayColor].CGColor;
         cell.btmpass.layer.borderWidth=1;
+        cell.btmpass.tintColor = [UIColor grayColor];
         
         cell.btmpass.userInteractionEnabled= NO;
         cell.btntable.userInteractionEnabled= NO;
