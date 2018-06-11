@@ -58,10 +58,10 @@
         //self.lblDay.text = dayName;
         self.lblDate.text=dateStr;
 
-        self.lbltitle.text = [NSString stringWithFormat:@"CLUB %@",[self.dictstore valueForKey:@"clubname"]];
+        self.lbltitle.text = [NSString stringWithFormat:@"%@",[self.dictstore valueForKey:@"clubname".capitalizedString]];
        
-        // self.lblmusic.text = [NSString stringWithFormat:@"DJ %@",[self.dictstore valueForKey:@"djname"]];
-       // self.lblmusicDetails.text = [NSString stringWithFormat:@"MUSIC %@",[self.dictstore valueForKey:@"eventName"]];
+        self.lblmusic.text = [NSString stringWithFormat:@"%@",[self.dictstore valueForKey:@"djname".capitalizedString]];
+        self.lblmusicDetails.text = [NSString stringWithFormat:@"%@",[self.dictstore valueForKey:@"eventName".capitalizedString]];
         
         NSString *stroff = @"%";
         self.lblpassoff.text = [NSString stringWithFormat:@"PASS : %@ %@ off",[self.dictstore valueForKey:@"offerForPass"],stroff];
@@ -78,7 +78,7 @@
         NSString *strper=@"%";
         self.lblpassoff.text=[NSString stringWithFormat:@"PASS : %@%@ off",[dictr valueForKey:@"passdiscount"],strper];
         self.lbltableoff.text=[NSString stringWithFormat:@"TABLE : %@%@ off",[dictr valueForKey:@"tablediscount"],strper];
-        self.lbltitle.text=[NSString stringWithFormat:@"CLUB : %@",[dictr valueForKey:@"clubname"]];
+        self.lbltitle.text=[NSString stringWithFormat:@"%@",[dictr valueForKey:@"clubname".capitalizedString]];
         self.lblDate.text=[NSString stringWithFormat:@"%@",[dictr valueForKey:@"eventDate"]];
         [self.imgBg downloadFromURL:[NSString stringWithFormat:@"%@%@",IMAGE_URL,[dictr valueForKey:@"imageURL"]] withPlaceholder:[UIImage imageNamed:@"place"]];
     }
@@ -106,7 +106,7 @@
         NSString * myString = [[NSString alloc] initWithData:jsonData   encoding:NSUTF8StringEncoding];
         NSLog(@" my json string : %@",myString);
         [socketIO sendMessage:myString];
-        [[AppDelegate sharedAppDelegate] showLoadingWithTitle:@"please wait"];
+        [[AppDelegate sharedAppDelegate] showLoadingWithTitle:@"Please Wait"];
     }
     else
     {
@@ -121,7 +121,7 @@
         NSString * myString = [[NSString alloc] initWithData:jsonData   encoding:NSUTF8StringEncoding];
         NSLog(@" my json string : %@",myString);
         [socketIO sendMessage:myString];
-        [[AppDelegate sharedAppDelegate] showLoadingWithTitle:@"please wait"];
+        [[AppDelegate sharedAppDelegate] showLoadingWithTitle:@"Please Wait"];
     }
     
 }
@@ -183,7 +183,7 @@
     }
     else
     {
-        [[AppDelegate sharedAppDelegate] showToastMessage:@"No Table avaiable !"];
+        [[AppDelegate sharedAppDelegate] showToastMessage:@"No Table Avaiable !"];
     }
 }
 
@@ -288,7 +288,7 @@
             self.lblDay.text=[NSString stringWithFormat:@"%@",dayName];
            
             
-            NSString *strdj = [NSString stringWithFormat:@"DJ : %@",[dictpass valueForKey:@"djname"]];
+            NSString *strdj = [NSString stringWithFormat:@"%@",[dictpass valueForKey:@"djname"]];
             NSMutableString *resultdj = [strdj mutableCopy];
             [resultdj enumerateSubstringsInRange:NSMakeRange(0, [resultdj length])
                                        options:NSStringEnumerationByWords

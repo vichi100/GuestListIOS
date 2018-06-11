@@ -141,7 +141,7 @@
     }
     
     NSDictionary *dict=[arrEventDetails objectAtIndex:indexPath.section];
-    NSString *strdm = [NSString stringWithFormat:@"DJ %@",[dict valueForKey:@"djname"]];
+    NSString *strdm = [NSString stringWithFormat:@"%@",[dict valueForKey:@"djname"]];
     NSMutableString *resultd = [strdm mutableCopy];
     [resultd enumerateSubstringsInRange:NSMakeRange(0, [resultd length])
                                 options:NSStringEnumerationByWords

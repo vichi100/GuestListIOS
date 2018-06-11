@@ -156,13 +156,13 @@
         
         if(![self.txtmob.text isEqualToString:self.txtconfmob.text])
         {
-            [[AppDelegate sharedAppDelegate] showToastMessage:@"Password and Confirm Password doesn't match  !"];
+            [[AppDelegate sharedAppDelegate] showToastMessage:@"Mobile and Confirm Mobile Doesn't Match !"];
         }
         else
         {
             if(flagage==0)
             {
-                [[AppDelegate sharedAppDelegate] showToastMessage:@"please confirm your age is 21 !"];
+                [[AppDelegate sharedAppDelegate] showToastMessage:@"Please Confirm Your Age is 21 !"];
                 
             }
             else
