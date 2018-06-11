@@ -200,7 +200,7 @@
         cell.btmpass.layer.borderColor=[UIColor whiteColor].CGColor;
         cell.btmpass.layer.borderWidth=1;
         
-        cell.btmpass.tag = indexPath.row;
+        cell.btmpass.tag = indexPath.section;
         
         cell.btmpass.userInteractionEnabled= YES;
         cell.btntable.userInteractionEnabled= YES;
@@ -208,10 +208,10 @@
         
         [cell.btmpass addTarget:self action:@selector(onClickedForPass:) forControlEvents:UIControlEventTouchUpInside];
         
-        cell.btntable.tag = indexPath.row;
+        cell.btntable.tag = indexPath.section;
         [cell.btntable addTarget:self action:@selector(onClickedForTable:) forControlEvents:UIControlEventTouchUpInside];
         
-        cell.btnguest.tag = indexPath.row;
+        cell.btnguest.tag = indexPath.section;
         [cell.btnguest addTarget:self action:@selector(onClickedForGuest:) forControlEvents:UIControlEventTouchUpInside];
     }
     
@@ -258,13 +258,13 @@
         cell.btntable.userInteractionEnabled= YES;
         cell.btnguest.userInteractionEnabled= YES;
         
-        cell.btmpass.tag = indexPath.row;
+        cell.btmpass.tag = indexPath.section;
         [cell.btmpass addTarget:self action:@selector(onClickedForPass:) forControlEvents:UIControlEventTouchUpInside];
 
-        cell.btntable.tag = indexPath.row;
+        cell.btntable.tag = indexPath.section;
         [cell.btntable addTarget:self action:@selector(onClickedForTable:) forControlEvents:UIControlEventTouchUpInside];
 
-        cell.btnguest.tag = indexPath.row;
+        cell.btnguest.tag = indexPath.section;
         [cell.btnguest addTarget:self action:@selector(onClickedForGuest:) forControlEvents:UIControlEventTouchUpInside];
     }
     
