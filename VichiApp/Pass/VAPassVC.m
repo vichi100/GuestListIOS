@@ -120,7 +120,8 @@
 
     
     cell.lblTitle.text=[NSString stringWithFormat:@"%@",result];
-    cell.lblsubtitle.text=[NSString stringWithFormat:@"%@",[dict valueForKey:@"tickettype"]];
+    NSString *strTicketType = [dict valueForKey:@"tickettype"];
+    cell.lblsubtitle.text=[NSString stringWithFormat:@"%@",strTicketType.capitalizedString];
     
     return cell;
     

@@ -55,7 +55,7 @@
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:@"EEEE"];
         NSString *dayName = [dateFormatter stringFromDate:date];
-        //self.lblDay.text = dayName;
+        self.lblDay.text = dayName;
         self.lblDate.text=dateStr;
 
         self.lbltitle.text = [NSString stringWithFormat:@"%@",[self.dictstore valueForKey:@"clubname".capitalizedString]];

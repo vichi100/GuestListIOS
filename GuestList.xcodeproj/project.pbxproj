@@ -832,6 +832,7 @@
 					50C2554D202980F9007CE51D = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 9HNBVM7U9A;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -1155,8 +1156,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_ENTITLEMENTS = GuestList.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Vichi Rajan (9HNBVM7U9A)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Vichi Rajan (9HNBVM7U9A)";
-				DEVELOPMENT_TEAM = 9HNBVM7U9A;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = VichiApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1167,8 +1169,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.application.club.guestlist;
 				PRODUCT_NAME = GuestList;
-				PROVISIONING_PROFILE = "ddc17d82-daa3-4a44-afe8-1f9820955b83";
-				PROVISIONING_PROFILE_SPECIFIER = GuestList_latest_adhoc;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -1180,8 +1182,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_ENTITLEMENTS = GuestList.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Vichi Rajan (9HNBVM7U9A)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Vichi Rajan (9HNBVM7U9A)";
-				DEVELOPMENT_TEAM = 9HNBVM7U9A;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = VichiApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1193,8 +1196,8 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.application.club.guestlist;
 				PRODUCT_NAME = GuestList;
-				PROVISIONING_PROFILE = "ddc17d82-daa3-4a44-afe8-1f9820955b83";
-				PROVISIONING_PROFILE_SPECIFIER = GuestList_latest_adhoc;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

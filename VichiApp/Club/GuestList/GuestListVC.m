@@ -403,8 +403,12 @@
     if([newStr isEqualToString:@"success"])
     {
         [self performSegueWithIdentifier:SEGUE_TO_BOOK_GUEST sender:nil];
+        
     }else if([newStr isEqualToString:@"fail"]){
-        UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"Message" message:@"You have already booked Guest list" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+        UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"Message" message:@"You have already booked Guest list !!!" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+        [alert show];
+    }else if([newStr isEqualToString:@"sold out"]){
+        UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"Message" message:@"Sold Out, Please Book Pass !!!" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
         [alert show];
     }
     
