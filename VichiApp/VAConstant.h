@@ -13,9 +13,9 @@
 
 #define IMAGE_URL @"http://199.180.133.121:3030"
 
-//#define IP_URL @"199.180.133.121"
+#define IP_URL @"199.180.133.121"
 //#define IP_URL @"198.167.140.169"
-#define IP_URL @"192.168.0.101"
+//#define IP_URL @"192.168.0.102"
 
 #define SEGUE_REVEAL @"segueToTabbar"
 #define SEGUE_TO_SUB_LIST @"segueToSubList"

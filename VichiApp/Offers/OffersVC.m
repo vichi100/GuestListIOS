@@ -111,20 +111,22 @@
 
     NSLog(@"log :%@",date);
     
+    NSString *dateStrstart = [dict valueForKey:@"starttime"];
     NSString *dateStrend = [dict valueForKey:@"timetoexpire"];
     
     NSDateFormatter *dateFormatd = [[NSDateFormatter alloc] init];
     [dateFormatd setDateFormat:@"dd/MMM/yyyy HH:mm:ss"];
-    //NSDate *dateend = [dateFormatd dateFromString:dateStrend];
+    NSDate *dateend = [dateFormatd dateFromString:dateStrend];
+    NSDate *datestart = [dateFormatd dateFromString:dateStrstart];
     
-     NSDate *dateend = [NSDate date];
-     NSString *strFinalDate=[[AppDelegate sharedAppDelegate] remaningTime:dateend endDate:date];
+     //NSDate *dateend = [NSDate date];
+     NSString *strFinalDate=[[AppDelegate sharedAppDelegate] remaningTime:datestart  endDate:dateend];
     
     
     cell.lblTitle.text=[NSString stringWithFormat:@"%@ | %@",result,[dict valueForKey:@"location"]];
     cell.lblOf.text=[NSString stringWithFormat:@"%@",[dict valueForKey:@"offername"]];
     cell.lblDate.text=[NSString stringWithFormat:@"%@",[dict valueForKey:@"date"]];
-    cell.lbltime.text=[NSString stringWithFormat:@"End Time : %@",strFinalDate];
+    cell.lbltime.text=[NSString stringWithFormat:@"Ending in %@",strFinalDate];
     
     return cell;
     

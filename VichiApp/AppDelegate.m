@@ -152,7 +152,7 @@
 //        //return durationString;
 //    }
     
-    NSString *strfinal=[NSString stringWithFormat:@"%ld D,%ld H,%ld M",(long)days,(long)hour,(long)minutes];
+    NSString *strfinal=[NSString stringWithFormat:@"%ldD:%ldH:%ldM",(long)days,(long)hour,(long)minutes];
     
     return strfinal;
 }

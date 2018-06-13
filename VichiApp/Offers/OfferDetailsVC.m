@@ -43,11 +43,11 @@
     
     if (dictr == nil)
     {
-       NSString *strClubId=[NSString stringWithFormat:@"%@",[self.dictstore valueForKey:@"clubid"]];
-        NSString *streventDate=[NSString stringWithFormat:@"%@",[self.dictstore valueForKey:@"date"]];
+       NSString *strClubId=[NSString stringWithFormat:@"%@",[self->_dictstore valueForKey:@"clubid"]];
+        NSString *streventDate=[NSString stringWithFormat:@"%@",[self->_dictstore valueForKey:@"date"]];
         [self establishclublist:strClubId :streventDate];
         
-        NSString *dateStr = [NSString stringWithFormat:@"%@",[self.dictstore valueForKey:@"date"]];
+        NSString *dateStr = [NSString stringWithFormat:@"%@",[self->_dictstore valueForKey:@"date"]];
         NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
         [dateFormat setDateFormat:@"dd/MMM/yyyy"];
         
@@ -58,15 +58,15 @@
         self.lblDay.text = dayName;
         self.lblDate.text=dateStr;
 
-        self.lbltitle.text = [NSString stringWithFormat:@"%@",[self.dictstore valueForKey:@"clubname".capitalizedString]];
+        self.lbltitle.text = [NSString stringWithFormat:@"%@",[self->_dictstore valueForKey:@"clubname"]];
        
-        self.lblmusic.text = [NSString stringWithFormat:@"%@",[self.dictstore valueForKey:@"djname".capitalizedString]];
-        self.lblmusicDetails.text = [NSString stringWithFormat:@"%@",[self.dictstore valueForKey:@"eventName".capitalizedString]];
+        self.lblmusic.text = [NSString stringWithFormat:@"%@",[self->_dictstore valueForKey:@"djname"]];
+        self.lblmusicDetails.text = [NSString stringWithFormat:@"%@",[self->_dictstore valueForKey:@"eventName"]];
         
         NSString *stroff = @"%";
-        self.lblpassoff.text = [NSString stringWithFormat:@"PASS : %@ %@ off",[self.dictstore valueForKey:@"offerForPass"],stroff];
-        self.lbltableoff.text = [NSString stringWithFormat:@"TABLE : %@ %@ off",[self.dictstore valueForKey:@"OfferForTable"],stroff];
-        [self.imgBg downloadFromURL:[NSString stringWithFormat:@"%@%@",IMAGE_URL,[self.dictstore valueForKey:@"imageURL"]] withPlaceholder:[UIImage imageNamed:@"place"]];
+        self.lblpassoff.text = [NSString stringWithFormat:@"PASS : %@ %@ off",[self->_dictstore valueForKey:@"offerForPass"],stroff];
+        self.lbltableoff.text = [NSString stringWithFormat:@"TABLE : %@ %@ off",[self->_dictstore valueForKey:@"OfferForTable"],stroff];
+        [self.imgBg downloadFromURL:[NSString stringWithFormat:@"%@%@",IMAGE_URL,[self->_dictstore valueForKey:@"imageURL"]] withPlaceholder:[UIImage imageNamed:@"place"]];
         
     }
     else
@@ -286,6 +286,20 @@
             NSString *dayName = [dateFormatter stringFromDate:date];
             
             self.lblDay.text=[NSString stringWithFormat:@"%@",dayName];
+            
+            //vichi
+            
+            NSString *strclubname = [NSString stringWithFormat:@"%@",[dictpass valueForKey:@"clubname"]];
+            NSMutableString *resultclubname = [strclubname mutableCopy];
+            [resultclubname enumerateSubstringsInRange:NSMakeRange(0, [resultclubname length])
+                                         options:NSStringEnumerationByWords
+                                      usingBlock:^(NSString *substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop) {
+                                          [resultclubname replaceCharactersInRange:NSMakeRange(substringRange.location, 1)
+                                                                  withString:[[substring substringToIndex:1] uppercaseString]];
+                                      }];
+            
+            self.lbltitle.text=[NSString stringWithFormat:@"%@",resultclubname];
+            //vichi-end
            
             
             NSString *strdj = [NSString stringWithFormat:@"%@",[dictpass valueForKey:@"djname"]];
@@ -308,7 +322,11 @@
                                                                   withString:[[substring substringToIndex:1] uppercaseString]];
                                       }];
 
-            self.lblmusicDetails.text=[NSString stringWithFormat:@"Music : %@",resultmusic];
+            NSDictionary *dictrd=[[NSUserDefaults standardUserDefaults] objectForKey:STORE_OFFER];               self.lblmusicDetails.text=[NSString stringWithFormat:@"%@",resultmusic];
+                        if (dictrd != nil)
+                           {
+                                   self.lblmusicDetails.text=[NSString stringWithFormat:@"%@",resultmusic];
+                                  }
             
         }
     }

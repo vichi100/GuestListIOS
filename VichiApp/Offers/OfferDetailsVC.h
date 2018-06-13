@@ -11,6 +11,7 @@
 @interface OfferDetailsVC : UIViewController
 
 @property (strong, nonatomic)NSMutableDictionary *dictstore;
+@property (strong, nonatomic)NSMutableDictionary *dictstored;
 @property (strong, nonatomic) IBOutlet UILabel *lblpassoff;
 @property (strong, nonatomic) IBOutlet UILabel *lbltableoff;
 
