@@ -1517,7 +1517,7 @@
                     <navigationItem key="navigationItem" id="ukr-Ao-5dY">
                         <nil key="title"/>
                         <view key="titleView" contentMode="scaleToFill" id="jzw-Ff-hge">
-                            <rect key="frame" x="35" y="5.5" width="305" height="33"/>
+                            <rect key="frame" x="35" y="6" width="305" height="33"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Passes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jVi-Ph-HPB">
@@ -1617,7 +1617,7 @@
                             </button>
                         </barButtonItem>
                         <view key="titleView" contentMode="scaleToFill" id="iAr-my-T7h">
-                            <rect key="frame" x="62.5" y="5.5" width="250" height="33"/>
+                            <rect key="frame" x="63" y="6" width="250" height="33"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ticket Info" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="La4-tk-7eq">
@@ -1972,11 +1972,11 @@
             </objects>
             <point key="canvasLocation" x="205" y="174"/>
         </scene>
-        <!--Club-->
+        <!--Clubs-->
         <scene sceneID="4Ln-UR-MX8">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0vr-v4-xEF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Club" image="pub" id="IKh-7K-85s">
+                    <tabBarItem key="tabBarItem" title="Clubs" image="pub" id="IKh-7K-85s">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                                 <color key="value" red="0.69803921568627447" green="0.31764705882352939" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1998,11 +1998,11 @@
             </objects>
             <point key="canvasLocation" x="725" y="168"/>
         </scene>
-        <!--Pass-->
+        <!--Passes-->
         <scene sceneID="jbP-9Y-zXO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="34h-QL-J5m" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Pass" image="ticket3" id="18L-Ax-IPY">
+                    <tabBarItem key="tabBarItem" title="Passes" image="ticket3" id="18L-Ax-IPY">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                                 <color key="value" red="0.69803921568627447" green="0.31764705882352939" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2661,11 +2661,11 @@
             </objects>
             <point key="canvasLocation" x="339" y="1775"/>
         </scene>
-        <!--Offer-->
+        <!--Offers-->
         <scene sceneID="7ZG-6d-Y4D">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aam-lW-MZ7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Offer" image="offer2" id="Gr4-72-Zyq">
+                    <tabBarItem key="tabBarItem" title="Offers" image="offer2" id="Gr4-72-Zyq">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                                 <color key="value" red="0.69803921568627447" green="0.31764705882352939" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
