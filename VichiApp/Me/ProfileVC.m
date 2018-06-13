@@ -10,6 +10,9 @@
 #import "AppDelegate.h"
 #import "VAConstant.h"
 
+#define RGB(r, g, b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
+#define RGBA(r, g, b, a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+
 @interface ProfileVC ()<UITextFieldDelegate>
 {
     int flag;
@@ -22,6 +25,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.view setBackgroundColor: RGB(35, 31, 32)];
     flag=0;
     [self setDetails];
 
@@ -42,11 +46,12 @@
     {
         if([dict objectForKey:@"mob"])
         {
-            self.txtmob.text=[NSString stringWithFormat:@"%@",[dict valueForKey:@"mob"]];
+            self.txtmob.text=[NSString stringWithFormat:@"+91 %@",[dict valueForKey:@"mob"]];
         }
         if([dict objectForKey:@"email"])
         {
-          self.txtname.text=[NSString stringWithFormat:@"%@",[dict valueForKey:@"email"]];
+            NSString *name = [NSString stringWithFormat:@"%@",[dict valueForKey:@"email"]];
+          self.txtname.text= name.capitalizedString;
         }
         
     }else
