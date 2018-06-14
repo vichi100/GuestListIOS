@@ -38,6 +38,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     self.tabBarController.tabBar.hidden = true;
+    self.navigationController.navigationBarHidden = NO;
 }
 
 #pragma mark -
@@ -383,33 +384,33 @@
     {
         //[searchBar resignFirstResponder];
         isFiltered=false;
-        
+        self.tblclub.hidden = YES;
         [self.tblclub reloadData];
     }
     else
     {
-                isFiltered = true;
-                filteredTableData = [[NSMutableArray alloc] init];
-        
-                NSLog(@"txt search :%@",self.txtsearch.text);
-        
-                NSPredicate *predicate = [NSPredicate predicateWithFormat:
-                                          @"clubname beginswith[c] %@",self.txtsearch.text]; // if you need case sensitive search avoid '[c]' in the predicate
-                // NSArray *arrLocation=[USERDEFAULT objectForKey:PREF_LOCATION_SEARCH];
-                NSArray *results = [self.arrAllClubs filteredArrayUsingPredicate:predicate];
-                [filteredTableData addObjectsFromArray:results];
-                /* for (NSMutableDictionary* item in self.arrProduct)
-                 {
-                 //case insensative search - way cool
-                 NSString *strtxt = [item valueForKey:@"sub_type"];
-                 NSLog(@"search text %@ \t string is :%@",self.txtSearch.text,string);
-                 if ([strtxt rangeOfString:string options:NSCaseInsensitivePredicateOption].location != NSNotFound)
-                 {
-                 [filteredTableData addObject:item];
-                 }
-                 }*/
-        
-                [self.tblclub reloadData];
+        self.tblclub.hidden = NO;
+        isFiltered = true;
+        filteredTableData = [[NSMutableArray alloc] init];
+
+        NSLog(@"txt search :%@",self.txtsearch.text);
+
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"clubname CONTAINS[c] %@ || location  CONTAINS[c] %@",self.txtsearch.text, self.txtsearch.text]; // if you need case sensitive search avoid '[c]' in the predicate
+        // NSArray *arrLocation=[USERDEFAULT objectForKey:PREF_LOCATION_SEARCH];
+        NSArray *results = [self.arrAllClubs filteredArrayUsingPredicate:predicate];
+        [filteredTableData addObjectsFromArray:results];
+        /* for (NSMutableDictionary* item in self.arrProduct)
+         {
+         //case insensative search - way cool
+         NSString *strtxt = [item valueForKey:@"sub_type"];
+         NSLog(@"search text %@ \t string is :%@",self.txtSearch.text,string);
+         if ([strtxt rangeOfString:string options:NSCaseInsensitivePredicateOption].location != NSNotFound)
+         {
+         [filteredTableData addObject:item];
+         }
+         }*/
+
+        [self.tblclub reloadData];
         
     }//end if-else
     

@@ -756,7 +756,7 @@
                     <navigationItem key="navigationItem" id="7bd-ls-X3B">
                         <nil key="title"/>
                         <view key="titleView" contentMode="scaleToFill" id="WCB-Ma-Vo4">
-                            <rect key="frame" x="35" y="6" width="305" height="33"/>
+                            <rect key="frame" x="35" y="5.5" width="305" height="33"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="uZF-xJ-FBm">
@@ -1509,7 +1509,7 @@
                     <navigationItem key="navigationItem" id="ukr-Ao-5dY">
                         <nil key="title"/>
                         <view key="titleView" contentMode="scaleToFill" id="jzw-Ff-hge">
-                            <rect key="frame" x="35" y="6" width="305" height="33"/>
+                            <rect key="frame" x="35" y="5.5" width="305" height="33"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Passes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jVi-Ph-HPB">
@@ -1609,7 +1609,7 @@
                             </button>
                         </barButtonItem>
                         <view key="titleView" contentMode="scaleToFill" id="iAr-my-T7h">
-                            <rect key="frame" x="63" y="6" width="250" height="33"/>
+                            <rect key="frame" x="62.5" y="5.5" width="250" height="33"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ticket Info" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="La4-tk-7eq">
@@ -1955,8 +1955,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="0vr-v4-xEF" kind="relationship" relationship="viewControllers" id="3YT-PQ-dIV"/>
-                        <segue destination="34h-QL-J5m" kind="relationship" relationship="viewControllers" id="sh4-ny-sYd"/>
                         <segue destination="aam-lW-MZ7" kind="relationship" relationship="viewControllers" id="QoO-0y-k1o"/>
+                        <segue destination="34h-QL-J5m" kind="relationship" relationship="viewControllers" id="sh4-ny-sYd"/>
                         <segue destination="8de-9L-p5l" kind="relationship" relationship="viewControllers" id="uNu-bL-elm"/>
                     </connections>
                 </tabBarController>
@@ -2638,7 +2638,7 @@
                             </button>
                         </barButtonItem>
                         <view key="titleView" contentMode="scaleToFill" id="ZMh-Ar-TNp">
-                            <rect key="frame" x="62.5" y="5.5" width="250" height="33"/>
+                            <rect key="frame" x="62" y="6" width="250" height="33"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About us" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VkR-nc-Vir">
@@ -2827,9 +2827,9 @@
         <segue reference="Ykl-BF-GLx"/>
         <segue reference="FTc-T8-pfq"/>
         <segue reference="U60-iM-zsc"/>
-        <segue reference="dkX-no-isp"/>
+        <segue reference="xhY-Di-4Q8"/>
         <segue reference="6go-ui-1mg"/>
         <segue reference="hSE-uc-JPs"/>
-        <segue reference="gQg-tE-AwK"/>
+        <segue reference="JWm-Lk-FOo"/>
     </inferredMetricsTieBreakers>
 </document>
