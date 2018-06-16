@@ -316,7 +316,7 @@
             }
             else  if([self.strStage intValue]>0)
             {
-                self.lblCoupleorgirl.text=[NSString stringWithFormat:@"%@ Stag is allowed ",self.strGirl];
+                self.lblCoupleorgirl.text=[NSString stringWithFormat:@"%@ Stag is allowed ",self.strStage];
             }
             else
             {
