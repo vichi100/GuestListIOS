@@ -568,7 +568,15 @@ didReceiveNotificationResponse:(UNNotificationResponse *)response
 {
     NSDictionary *userInfo = response.notification.request.content.userInfo;
     NSLog(@"%@", userInfo);
+//    UIAlertView *alert =[[UIAlertView alloc] initWithTitle:@"Message" message:@"Push is working as handler" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"ok", nil];
+//    [alert show];
     
+    NSLog(@"Push data :%@",userInfo);
+    if(userInfo != nil)
+    {
+        [[NSUserDefaults standardUserDefaults] setValue:@"1" forKey:PREF_NOTIFY];
+        [[NSUserDefaults standardUserDefaults] setValue:userInfo forKey:PREF_NOTIFICATION];
+    }
     
 }
 #endif
@@ -614,6 +622,8 @@ didReceiveNotificationResponse:(UNNotificationResponse *)response
 // With "FirebaseAppDelegateProxyEnabled": NO
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler: (void (^)(UIBackgroundFetchResult))completionHandler
 {
+//    UIAlertView *alert =[[UIAlertView alloc] initWithTitle:@"Message" message:@"Push is working as background" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"ok", nil];
+//    [alert show];
     
     NSLog(@"Push data :%@",userInfo);
     if(userInfo != nil)
