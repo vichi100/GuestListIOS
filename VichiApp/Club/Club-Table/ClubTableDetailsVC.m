@@ -58,8 +58,12 @@
 
 -(void)setDetails
 {
+    if(self.dictMain != nil){
+        [self.imgItem downloadFromURL:[NSString stringWithFormat:@"%@",[self.dictMain valueForKey:@"imageURL"]] withPlaceholder:[UIImage imageNamed:@"place"]];
+    } else{
+        [self.imgItem downloadFromURL:[NSString stringWithFormat:@"%@",self->_imgProd] withPlaceholder:[UIImage imageNamed:@"place"]];
+    }
     
-    [self.imgItem downloadFromURL:[NSString stringWithFormat:@"%@",[self.dictMain valueForKey:@"imageURL"]] withPlaceholder:[UIImage imageNamed:@"place"]];
     
     self.imgItem.clipsToBounds=YES;
     

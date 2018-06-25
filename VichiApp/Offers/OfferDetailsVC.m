@@ -41,7 +41,7 @@
    
     NSDictionary *dictr=[[NSUserDefaults standardUserDefaults] objectForKey:STORE_OFFER];
     
-    if (dictr == nil)
+    if (self->_dictstore != nil)
     {
        NSString *strClubId=[NSString stringWithFormat:@"%@",[self->_dictstore valueForKey:@"clubid"]];
         NSString *streventDate=[NSString stringWithFormat:@"%@",[self->_dictstore valueForKey:@"date"]];
@@ -68,8 +68,11 @@
         self.lbltableoff.text = [NSString stringWithFormat:@"TABLE : %@ %@ off",[self->_dictstore valueForKey:@"OfferForTable"],stroff];
         [self.imgBg downloadFromURL:[NSString stringWithFormat:@"%@%@",IMAGE_URL,[self->_dictstore valueForKey:@"imageURL"]] withPlaceholder:[UIImage imageNamed:@"place"]];
         
+        dictr = NULL;
+        self->_dictstore = NULL;
+        
     }
-    else
+    else if (dictr != nil)
     {
         NSString *strClubId=[NSString stringWithFormat:@"%@",[dictr valueForKey:@"clubid"]];
         NSString *strClubName=[NSString stringWithFormat:@"%@",[dictr valueForKey:@"clubname"]];
@@ -84,6 +87,9 @@
         self.lblmusic.text = [NSString stringWithFormat:@"%@",[dictr valueForKey:@"djname"]];
         self.lblmusicDetails.text = [NSString stringWithFormat:@"%@",[dictr valueForKey:@"eventName"]];
         [self.imgBg downloadFromURL:[NSString stringWithFormat:@"%@%@",IMAGE_URL,[dictr valueForKey:@"imageURL"]] withPlaceholder:[UIImage imageNamed:@"place"]];
+        
+        dictr = NULL;
+        self->_dictstore = NULL;
     }
     
 }
