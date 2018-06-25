@@ -9,6 +9,8 @@
 #ifndef VAConstant_h
 #define VAConstant_h
 
+#define TOPIC_GLOBAL @"CLUB_GUEST_LIST_TPOIC"
+
 //#define IMAGE_URL @"http://198.167.140.169:3030"
 
 #define IMAGE_URL @"http://199.180.133.121:3030"

@@ -72,14 +72,17 @@
     else
     {
         NSString *strClubId=[NSString stringWithFormat:@"%@",[dictr valueForKey:@"clubid"]];
-        NSString *streventDate=[NSString stringWithFormat:@"%@",[dictr valueForKey:@"date"]];
+        NSString *strClubName=[NSString stringWithFormat:@"%@",[dictr valueForKey:@"clubname"]];
+        NSString *streventDate=[NSString stringWithFormat:@"%@",[dictr valueForKey:@"eventDate"]];
         [self establishclublist:strClubId :streventDate];
         
         NSString *strper=@"%";
         self.lblpassoff.text=[NSString stringWithFormat:@"PASS : %@%@ off",[dictr valueForKey:@"passdiscount"],strper];
         self.lbltableoff.text=[NSString stringWithFormat:@"TABLE : %@%@ off",[dictr valueForKey:@"tablediscount"],strper];
-        self.lbltitle.text=[NSString stringWithFormat:@"%@",[dictr valueForKey:@"clubname".capitalizedString]];
+        self.lbltitle.text=[NSString stringWithFormat:@"%@",[dictr valueForKey:@"clubname"]];
         self.lblDate.text=[NSString stringWithFormat:@"%@",[dictr valueForKey:@"eventDate"]];
+        self.lblmusic.text = [NSString stringWithFormat:@"%@",[dictr valueForKey:@"djname"]];
+        self.lblmusicDetails.text = [NSString stringWithFormat:@"%@",[dictr valueForKey:@"eventName"]];
         [self.imgBg downloadFromURL:[NSString stringWithFormat:@"%@%@",IMAGE_URL,[dictr valueForKey:@"imageURL"]] withPlaceholder:[UIImage imageNamed:@"place"]];
     }
     

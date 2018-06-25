@@ -673,6 +673,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
     strdeviceToken=[self stringWithDeviceToken:deviceToken];
     NSLog(@"token:%@",strdeviceToken);
     [FIRMessaging messaging].APNSToken = deviceToken;
+    [[FIRMessaging messaging] subscribeToTopic:TOPIC_GLOBAL];
     
 }
 
